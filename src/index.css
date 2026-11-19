@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primaryBlue: #087EA4;
+  --color-aqua: #159BB5;
+  --color-darkNavy: #173B50;
+  --color-lightBg: #F2F8FA;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #ffffff;
+  color: #173B50;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Professional button & navigation animations */
+@keyframes navShimmer {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  50%, 100% {
+    transform: translateX(200%) skewX(-20deg);
+  }
+}
+
+.animate-nav-shimmer {
+  animation: navShimmer 3.5s infinite ease-in-out;
+}
+
+/* Subtle focus ring styling */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #087EA4;
+  outline-offset: 2px;
+}
